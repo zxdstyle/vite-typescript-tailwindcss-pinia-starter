@@ -10,6 +10,11 @@ const routes: RouteRecordRaw[] = [
 				name: 'home',
 				component: () => import('@/views/dashboard/index.vue'),
 			},
+			{
+				path: '/settings',
+				name: 'settings',
+				component: () => import('@/views/setting/index.vue'),
+			},
 		],
 	},
 ]

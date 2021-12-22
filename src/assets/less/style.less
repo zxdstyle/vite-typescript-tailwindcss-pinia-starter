@@ -1,9 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 
 @import "font";
+@import "components/tailwind";
 @import "components/dropdown";
+@import "components/nprogress";
 
 #app,
 input {
@@ -15,6 +15,10 @@ input {
 
 #app {
 	width: 100%;
+}
+
+main {
+	padding-top: 72px;
 }
 
 ::-webkit-scrollbar {

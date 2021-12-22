@@ -10,7 +10,7 @@
 			<router-link to="/library" :class="{ active: $route.name === 'library' }">音乐库</router-link>
 		</div>
 		<div class="flex justify-end">
-			<div class="bg-transparent font-semibold border-none flex items-center bg-gray-100 px-2 rounded hover:scale-105 duration-200">
+			<div class="font-semibold border-none flex items-center bg-gray-100 px-2 rounded-md hover:scale-105 duration-200">
 				<SvgIcon name="search" class="h-4 w-4 opacity-30 bg-gray-200 rounded-xl mr-1" />
 				<input v-model="keywords" type="search" placeholder="搜索" @keydown.enter="doSearch" class="bg-transparent text-base py-1 border-none outline-none" />
 			</div>
@@ -19,12 +19,12 @@
 				<Avatar src="http://s4.music.126.net/style/web2/img/default/default_avatar.jpg?param=60y60" class="ml-4 cursor-pointer" />
 
 				<template #overlay>
-					<Menu>
-						<MenuItem>
+					<Menu @click="onProfile">
+						<MenuItem key="settings">
 							<SvgIcon name="settings" />
 							<span>设置</span>
 						</MenuItem>
-						<MenuItem>
+						<MenuItem key="login">
 							<SvgIcon name="login" />
 							<span>登录</span>
 						</MenuItem>
@@ -47,6 +47,13 @@
 	import { defineComponent, reactive, toRefs } from 'vue'
 	import ButtonIcon from '@/components/common/ButtonIcon.vue'
 	import { Dropdown, Avatar, Menu } from 'ant-design-vue'
+
+	interface MenuInfo {
+		key: string
+		keyPath: string[]
+		item: any
+		domEvent: MouseEvent
+	}
 
 	const MenuItem = Menu.Item
 	const MenuDivider = Menu.Divider
@@ -75,7 +82,11 @@
 				})
 			}
 
-			return { ...toRefs(state), go, doSearch }
+			const onProfile = ({ key }: MenuInfo) => {
+				router.push({ name: key })
+			}
+
+			return { ...toRefs(state), go, doSearch, onProfile }
 		},
 	})
 </script>
@@ -92,12 +103,12 @@
 		height: 64px;
 		padding: 0 10vw;
 		backdrop-filter: saturate(180%) blur(20px);
-		z-index: 100;
 
 		.navigation-links {
 			a {
 				padding: 6px 10px;
-				@apply font-bold rounded mx-3 hover:bg-gray-100 active:scale-75 text-black;
+				transition: 0.2s;
+				@apply font-bold rounded mx-3 text-black text-lg hover:bg-gray-100 active:scale-90;
 			}
 		}
 	}
