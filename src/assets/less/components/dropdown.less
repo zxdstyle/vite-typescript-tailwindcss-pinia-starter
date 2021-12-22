@@ -1,0 +1,22 @@
+.ant-dropdown-menu {
+	min-width: 136px;
+	max-width: 240px;
+	padding: 8px 5px !important;
+
+	.ant-dropdown-menu-item {
+		border-radius: 9px;
+		@apply flex items-center;
+
+		.ant-dropdown-menu-title-content {
+			@apply flex items-center;
+
+			svg {
+				@apply w-4 h-4 mr-2;
+			}
+		}
+
+		&, svg-icon {
+			@apply hover:text-blue-500;
+		}
+	}
+}

@@ -1,0 +1,135 @@
+<template>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+	<div>home</div>
+</template>
+
+<script lang="ts">
+	import { defineComponent, reactive, toRefs } from 'vue'
+
+	export default defineComponent({
+		props: {},
+		setup() {
+			const state = reactive({})
+
+			return { ...toRefs(state) }
+		},
+	})
+</script>
+
+<style lang="less" scoped></style>

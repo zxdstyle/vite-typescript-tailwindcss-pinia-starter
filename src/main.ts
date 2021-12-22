@@ -1,7 +1,8 @@
 import App from './App.vue'
 import { createApp } from 'vue'
-import { setupRouter } from '@/router'
+import 'virtual:svg-icons-register'
 import { setupStore } from '@/store'
+import { setupRouter } from '@/router'
 
 import './assets/less/style.less'
 
