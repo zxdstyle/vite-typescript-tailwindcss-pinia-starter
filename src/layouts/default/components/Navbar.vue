@@ -102,6 +102,8 @@
 		align-items: center;
 		height: 64px;
 		padding: 0 10vw;
+		z-index: 1000;
+		background: hsla(0, 0%, 100%, 0.86);
 		backdrop-filter: saturate(180%) blur(20px);
 
 		.navigation-links {

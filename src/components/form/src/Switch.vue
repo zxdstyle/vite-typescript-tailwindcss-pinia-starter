@@ -18,7 +18,7 @@
 <style lang="less" scoped>
 	.toggle {
 		input {
-			@apply opacity-0 absolute;
+			@apply opacity-0 absolute cursor-pointer;
 
 			& + label {
 				@apply relative inline-block select-none bg-gray-100 rounded-lg;
@@ -28,7 +28,7 @@
 			}
 
 			& + label:before {
-				@apply absolute block top-0 left-0 rounded-lg;
+				@apply absolute block top-0 left-0 rounded-lg cursor-pointer;
 				content: '';
 				transition: 0.2s cubic-bezier(0.24, 0, 0.5, 1);
 				height: 32px;
@@ -36,7 +36,7 @@
 			}
 
 			& + label:after {
-				@apply absolute block bg-white;
+				@apply absolute block bg-white cursor-pointer;
 				content: '';
 				box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.02), 0 4px 0px 0 hsla(0, 0%, 0%, 0.01), 0 4px 9px hsla(0, 0%, 0%, 0.08), 0 3px 3px hsla(0, 0%, 0%, 0.03);
 				transition: 0.35s cubic-bezier(0.54, 1.6, 0.5, 1);

@@ -1,4 +1,5 @@
 // @ts-ignore
+import NProgress from 'nprogress'
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios'
 
 const instance = axios.create({
@@ -9,6 +10,7 @@ const instance = axios.create({
 instance.interceptors.request.use(
 	(config: AxiosRequestConfig) => {
 		// config.headers['authorization'] = store.state.system.userInfo.token
+		NProgress.start()
 		return config
 	},
 	(error: any) => {
@@ -18,6 +20,7 @@ instance.interceptors.request.use(
 
 instance.interceptors.response.use(
 	(response: AxiosResponse) => {
+		NProgress.done()
 		return response.data.data
 	},
 	(error: any) => {
