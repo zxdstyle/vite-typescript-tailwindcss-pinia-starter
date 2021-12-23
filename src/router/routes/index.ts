@@ -1,9 +1,9 @@
 import { RouteRecordRaw } from 'vue-router'
 
-const routes: RouteRecordRaw[] = [
+const index: RouteRecordRaw[] = [
 	{
 		path: '/',
-		component: () => import('@/layouts/default/index.vue'),
+		component: () => import('@/layouts/admin/index.vue'),
 		children: [
 			{
 				path: '/',
@@ -19,4 +19,4 @@ const routes: RouteRecordRaw[] = [
 	},
 ]
 
-export default routes
+export default index
