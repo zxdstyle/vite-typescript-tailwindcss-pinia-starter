@@ -1,5 +1,5 @@
 <template>
-	<Menu mode="inline">
+	<Menu mode="inline" class="mx-4 w-auto border-none">
 		<MenuItemGroup v-for="(group, index) in menuGroups" :key="index" v-bind="group" />
 	</Menu>
 </template>

@@ -1,3 +1,30 @@
-.ant-menu-item-group-title {
-	@apply text-gray-300 font-semibold uppercase !important;
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+	background: linear-gradient(118deg,#7367f0,rgba(115,103,240,.7));
+	box-shadow: 0 0 10px 1px rgb(115 103 240 / 70%);
 }
+
+.ant-menu-item-selected , ant-menu-item-active {
+	color: #fff !important;
+}
+
+.ant-menu-item-group-title {
+	@apply text-gray-400 font-medium uppercase tracking-wider !important;
+}
+
+
+ .ant-menu-item , .ant-menu-submenu-title{
+	 @apply rounded after:hidden;
+
+	 span {
+		 transition: transform .25s ease,-webkit-transform .25s ease !important;
+	 }
+	 &:hover span {
+		 transform: translateX(5px);
+	 }
+ }
+
+ .ant-menu-submenu-open {
+	 .ant-menu-submenu-title {
+		 background: #f5f5f5;
+	 }
+ }
