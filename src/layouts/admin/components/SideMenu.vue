@@ -1,5 +1,5 @@
 <template>
-	<Menu mode="inline" class="mx-4 w-auto border-none">
+	<Menu v-model:selectedKeys="selectedKeys" :openKeys="openKeys" mode="inline" @click="onClick" class="mx-4 w-auto border-none">
 		<MenuItemGroup v-for="(group, index) in menuGroups" :key="index" v-bind="group" />
 	</Menu>
 </template>
@@ -7,8 +7,19 @@
 <script lang="ts">
 	import { MenuItemGroup } from './Menu'
 	import { Menu } from 'ant-design-vue'
-	import { defineComponent, PropType } from 'vue'
+	import { getAllParentPath } from '@/utils/helper/tree'
+	import { defineComponent, PropType, reactive, toRefs } from 'vue'
 	import { MenuGroup } from '@/router/types'
+	import { useRouter, useRoute } from 'vue-router'
+
+	interface MenuItemInfo {
+		key: string
+	}
+
+	interface State {
+		openKeys: string[]
+		selectedKeys: string[]
+	}
 
 	export default defineComponent({
 		name: 'SideMenu',
@@ -19,7 +30,22 @@
 				default: () => [],
 			},
 		},
-		setup() {},
+		setup(props) {
+			const route = useRoute()
+			const router = useRouter()
+
+			const state: State = reactive({
+				openKeys: [],
+				selectedKeys: [],
+			})
+
+			const onClick = ({ key }: MenuItemInfo) => router.push({ name: key })
+			console.log(route)
+			state.selectedKeys = [route.name?.toString() || '']
+			state.openKeys = getAllParentPath(props.menuGroups, route.name?.toString() || '')
+			console.log(state.openKeys)
+			return { ...toRefs(state), onClick }
+		},
 	})
 </script>
 

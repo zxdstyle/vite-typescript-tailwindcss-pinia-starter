@@ -12,6 +12,9 @@ module.exports = {
 			height: {
 				18: '4.5rem',
 			},
+			colors: {
+				primary: '#7367f0',
+			},
 			minWidth: {
 				'1/2': '50%',
 				xs: '10rem',

@@ -48,7 +48,11 @@ const MenuItem = defineComponent({
 				icon: () => icon,
 			}
 
-			return () => <Menu.SubMenu title={props.item?.name}>{slots}</Menu.SubMenu>
+			return () => (
+				<Menu.SubMenu title={props.item?.name} key={props.item?.path}>
+					{slots}
+				</Menu.SubMenu>
+			)
 		}
 
 		const slots = {
