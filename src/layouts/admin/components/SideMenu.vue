@@ -40,10 +40,10 @@
 			})
 
 			const onClick = ({ key }: MenuItemInfo) => router.push({ name: key })
-			console.log(route)
+
 			state.selectedKeys = [route.name?.toString() || '']
 			state.openKeys = getAllParentPath(props.menuGroups, route.name?.toString() || '')
-			console.log(state.openKeys)
+
 			return { ...toRefs(state), onClick }
 		},
 	})
