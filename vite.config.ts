@@ -36,6 +36,7 @@ export default defineConfig({
 	resolve: {
 		alias: {
 			'@': pathResolve('src'),
+			'#': pathResolve('types'),
 		},
 	},
 	server: {
